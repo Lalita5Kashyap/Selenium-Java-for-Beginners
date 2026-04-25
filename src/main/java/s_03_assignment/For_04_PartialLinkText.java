@@ -1,17 +1,20 @@
-package s_04_locators;
+package s_03_assignment;
+
+//---> partialLinkText()
+//		open the browser
+//		navigate to the demo web shop
+//		then click on this product “Build your own cheap computer”
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class L_08_Xpath {
+public class For_04_PartialLinkText {
 
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://demowebshop.tricentis.com/");
-		
-		//Absolute xpath
-		driver.findElement(By.xpath("")).click();
+		driver.findElement(By.partialLinkText("Build your own")).click();
 	}
 }

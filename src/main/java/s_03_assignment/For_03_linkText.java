@@ -1,17 +1,20 @@
-package s_04_locators;
+package s_03_assignment;
+
+//----> linktText()
+//		open the browser 
+//		navigate to the demo web shop
+//		after that click all this link Register
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class L_08_Xpath {
+public class For_03_linkText {
 
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://demowebshop.tricentis.com/");
-		
-		//Absolute xpath
-		driver.findElement(By.xpath("")).click();
+		driver.findElement(By.linkText("Register")).click();
 	}
 }

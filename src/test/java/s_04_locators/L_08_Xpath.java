@@ -27,6 +27,16 @@ public class L_08_Xpath {
 		driver.findElement(By.xpath("//input[contains(@id,'small')]")).sendKeys("How are you!");
 		
 		//Relative xpath By Multiple Attribute
+		driver.findElement(By.xpath("//input[@name='q' and @type='text']")).sendKeys("good");
+		
+		//Relative xpath By indexing
+		driver.findElement(By.xpath("(//input[@type='text'])[2]")).sendKeys("abc");
+		
+		
+		//Relative xpath By starts-with
+		driver.findElement(By.xpath("//input[starts-with(@class,'search')]")).sendKeys("Hello");
+		
+		//Relative xpath By axes
 		
 		
 	}

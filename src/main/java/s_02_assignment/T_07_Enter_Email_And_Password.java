@@ -18,24 +18,27 @@ public class T_07_Enter_Email_And_Password {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to("https://demowebshop.tricentis.com");
-		
+
 		driver.findElement(By.linkText("Log in")).click();
-		WebElement email=driver.findElement(By.id("Email"));
+		WebElement email = driver.findElement(By.id("Email"));
 		email.sendKeys("abc@gmail.com");
-		WebElement password=driver.findElement(By.id("Password"));
+		WebElement password = driver.findElement(By.id("Password"));
 		password.sendKeys("abc");
 		Thread.sleep(5000);
-		
+
 		driver.navigate().refresh();
+		// Re-locate elements AFTER refresh
+		WebElement email1 = driver.findElement(By.id("Email"));
+		WebElement password1 = driver.findElement(By.id("Password"));
 		// Get values after refresh
-		String emailValue = email.getAttribute("value");
-		String passwordValue = password.getAttribute("value");
+		String emailValue = email1.getAttribute("value");
+		String passwordValue = password1.getAttribute("value");
 
 		// Check if empty
-		if(emailValue.isEmpty() && passwordValue.isEmpty()) {
-		    System.out.println("Fields are empty");
+		if (emailValue.isEmpty() && passwordValue.isEmpty()) {
+			System.out.println("Fields are empty");
 		} else {
-		    System.out.println("Fields are NOT empty");
-		
+			System.out.println("Fields are NOT empty");
+		}
 	}
 }

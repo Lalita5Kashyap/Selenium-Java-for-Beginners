@@ -12,10 +12,8 @@ public class L_09_Relative_Locators {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.instagram.com/?hl=en");
-		
-		WebElement reff=driver.findElement(By.name("email"));
-		driver.findElement(RelativeLocator.with(By.tagName("input")).below(reff))
-		.sendKeys("lalita@123");
-	}
 
+		WebElement reff = driver.findElement(By.name("email"));
+		driver.findElement(RelativeLocator.with(By.tagName("input")).below(reff)).sendKeys("lalita@123");
+	}
 }

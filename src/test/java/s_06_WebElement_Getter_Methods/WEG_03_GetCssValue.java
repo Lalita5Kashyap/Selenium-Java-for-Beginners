@@ -1,4 +1,4 @@
-package s_06_WebElement_Getter_Methods;
+package s_06_webelement_getter_methods;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package s_05_WebElement_Actions_Methods;
+package s_05_webelement_actions_methods;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
